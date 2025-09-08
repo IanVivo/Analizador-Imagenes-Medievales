@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analizador de Objetos Medievales</title>
+    <meta name="description" content="Analiza artefactos medievales con Inteligencia Artificial" />
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-container">
+          <div class="animated-logo">
+            <div class="logo-ring logo-ring-1"></div>
+            <div class="logo-ring logo-ring-2"></div>
+            <div class="logo-ring logo-ring-3"></div>
+            <div class="logo-text">
+              <span class="text-primary">A</span>
+              <span class="text-secondary">I</span>
+            </div>
+          </div>
+        </div>
+        <h1>Analizador de Objetos Medievales</h1>
+        <p class="subtitle">
+          Sube una imagen de un objeto medieval y nuestra IA lo clasificará como arma, armadura o escudo con un análisis detallado.
+        </p>
+      </div>
+      
+      <div class="main-content">
+        <div class="panel image-panel" id="imagePanel">
+          <div class="drop-area" id="dropArea">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <h3>Arrastra y Suelta una Imagen</h3>
+            <p>o</p>
+            <label for="fileInput" class="button">Seleccionar Archivo</label>
+            <input type="file" id="fileInput" accept="image/*" accept=".jpg,.jpeg,.png,.bmp,.gif,.tiff,.webp" style="display: none;" />
+          </div>
+          <div class="image-preview" id="imagePreview" style="display: none;">
+            <img id="previewImage" alt="Vista Previa" />
+          </div>
+        </div>
+        
+        <div class="panel results-panel" id="resultsPanel">
+          <div class="upload-message" id="uploadMessage">
+            <h3>Sube una imagen para analizar</h3>
+            <p>Nuestra IA determinará si tu imagen es un arma, armadura o escudo medieval.</p>
+            <div class="categories">
+              <div class="category-item">
+                <div class="category-dot weapon-dot"></div>
+                <span>Armas - Espadas, hachas, mazas, etc.</span>
+              </div>
+              <div class="category-item">
+                <div class="category-dot armor-dot"></div>
+                <span>Armaduras - Placa, cota de malla, cuero, etc.</span>
+              </div>
+              <div class="category-item">
+                <div class="category-dot shield-dot"></div>
+                <span>Escudos - Broqueles, escudos en forma de cometa, etc.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="analyzing" id="analyzing" style="display: none;">
+            <div class="loader"></div>
+            <h3>Analizando tu artefacto</h3>
+            <p>Nuestra IA está examinando los detalles...</p>
+          </div>
+          
+          <div class="results" id="results" style="display: none;">
+            <div class="results-header">
+              <div class="results-badge">Análisis Completado</div>
+              <h2 id="resultTitle">Esto parece ser un(a) <span id="itemType">artefacto medieval</span></h2>
+              <p>Aquí está el desglose de nuestro análisis</p>
+            </div>
+            
+            <div class="results-cards" id="resultsCards">
+              <!-- Las tarjetas de resultados se insertarán aquí mediante JavaScript -->
+            </div>
+            
+            <div class="buttons">
+              <button id="resetButton" class="button">Analizar Otra Imagen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="how-it-works">
+        <h2>Cómo Funciona</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Subir</h3>
+            <p>Sube o arrastra y suelta una imagen de tu objeto medieval (arma, armadura o escudo).</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Analizar</h3>
+            <p>Nuestra IA examina la imagen, identificando características clave y patrones históricos.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Resultados</h3>
+            <p>Recibe una clasificación detallada con porcentajes de confianza para cada categoría.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="static/js/app.js"></script>
+    <!-- IMPORTANTE: NO ELIMINAR ESTA ETIQUETA DE SCRIPT NI ESTE COMENTARIO -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </body>
+</html>

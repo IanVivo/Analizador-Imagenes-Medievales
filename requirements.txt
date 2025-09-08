@@ -1,0 +1,5 @@
+Python 3.10.0
+pip install scikit-learn matplotlib numpy Pillow Flask
+pip install tensorflow==2.16.1
+py -m pip uninstall keras -y
+py -m pip install keras==3.9
