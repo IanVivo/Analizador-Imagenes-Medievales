@@ -21,14 +21,14 @@ Este clasificador de imagenes es un proyecto que analiza imágenes de temática 
 ### Subir
 Sube o arrastra y suelta una imagen de tu objeto medieval (arma, armadura o escudo).
 
-![Web_1](img\Web_1.png)
+![Web_1](img/Web_1.png)
 
 ### Analizar
 Nuestra IA examina la imagen, identificando características clave y patrones históricos.
 
-![Web_2](img\Web_2.png)
+![Web_2](img/Web_2.png)
 
 ### Resultados
 Recibe una clasificación detallada con porcentajes de confianza para cada categoría.
 
-![Web_3](img\Web_3.png)
+![Web_3](img/Web_3.png)
